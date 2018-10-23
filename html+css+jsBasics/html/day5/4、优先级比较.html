@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{
+            color: red;
+        }
+        .p1{
+            color: green;
+        }
+        #idp{/*权重100*/
+            color: blue;
+        }
+        /* 继承与通配符选择器做比较 */
+        *{
+            background: yellow;
+        }
+        h1{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内式权重为1000  !important 权重为无穷大-->
+    <p class="p1" id="idp" style="color:firebrick;">我是p元素</p>
+    <div>
+        <h1>我是h标签</h1>
+    </div>
+</body>
+</html>

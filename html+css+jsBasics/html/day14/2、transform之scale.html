@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        div:hover{
+            transform: scale(.5);
+        }
+        input:focus::placeholder{
+            transform: scale(.5);
+            transform-origin: left top;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <input type="text" placeholder="请输入用户名" />
+</body>
+</html>

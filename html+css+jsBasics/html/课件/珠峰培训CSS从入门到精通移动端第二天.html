@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><head><title>珠峰培训CSS从入门到精通移动端第二天</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="珠峰培训css从入门到精通移动端第二天">珠峰培训CSS从入门到精通移动端第二天</h1>
+
+
+
+<h2 id="1媒体查询详解">1、媒体查询详解</h2>
+
+<blockquote>
+  <p>语法：media 媒体查询 逻辑操作符 （媒体属性）{样式属性}</p>
+</blockquote>
+
+<p><strong>逻辑操作符</strong></p>
+
+<ul><li><strong>and</strong>: 操作符用来把多个媒体属性组合起来，合并到同一条媒体查询中。只有当每个属性都为真时，这条查询的结果才为真；  <br>
+<code>@media all and (min-width: 700px) and (orientation: landscape) { ... }</code></li>
+<li><strong>not</strong>：操作符用来对一条媒体查询的结果进行取反  <br>
+<code>@media not all and (monochrome) { ... } &lt;=&gt; @media not (all and (monochrome)) { ... }</code></li>
+<li><strong>only：</strong>操作符表示仅在媒体查询匹配成功时应用指定样式。可以通过它让选中的样式在老式浏览器中不被应用；  <br>
+<code>media="only screen and (max-width:1000px)"{...}</code></li>
+</ul>
+
+
+
+<h2 id="2移动端页面设置稿">2、移动端页面设置稿</h2>
+
+<blockquote>
+  <p>项目常用设计稿尺寸一: 640 * 1136 (iPhone5 )  <br>
+  项目常用设计稿尺寸二: 750 * 1334 (iPhone6 )  <br>
+  项目常用设计稿尺寸三: 1242 * 2208 (iPhone6Plus )</p>
+</blockquote>
+
+<h2 id="3响应式布局的详解">3、响应式布局的详解</h2>
+
+<blockquote>
+  <p>响应式布局，Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。 <br>
+  <strong>响应式设计的步骤</strong></p>
+  
+  <ul><li>设置 meta标签，让浏览器窗口和设备宽度保持一致； <br>
+  通过媒介查询来设置样式 Media Queries；</li>
+  </ul>
+  
+  <p><strong>常见的响应式的网站</strong></p>
+  
+  <ul><li>猎豹官网首页： <a href="https://www.liebao.cn/" target="_blank">https://www.liebao.cn/</a></li>
+  <li>华为官网首页： <a href="https://www.huawei.com/cn/" target="_blank">https://www.huawei.com/cn/</a></li>
+  <li>摩拜单车官网首页： <a href="https://mobike.com/cn/" target="_blank">https://mobike.com/cn/</a></li>
+  </ul>
+</blockquote></div></body></html>

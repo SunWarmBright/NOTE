@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 2px solid green;
+        }
+        .son{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 70px;
+            height: 70px;
+            background: yellow;
+            animation: myFirst 2s infinite;
+        }
+        @keyframes myFirst{
+            0% {left: 0; top: 0;}
+            25% { left: 430px; top: 0;}
+            50% {left: 430px; top: 430px;}
+            75% {left: 0; top: 430px }
+            100% {left:0; top:0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

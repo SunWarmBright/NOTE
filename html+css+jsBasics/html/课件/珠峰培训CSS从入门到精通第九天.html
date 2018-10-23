@@ -1,0 +1,127 @@
+<!DOCTYPE html><html><head><title>珠峰培训CSS从入门到精通第九天</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="珠峰培训css从入门到精通第九天">珠峰培训CSS从入门到精通第九天</h1>
+
+
+
+<h2 id="1css-color-颜色">1、CSS Color 颜色</h2>
+
+<blockquote>
+  <p>设置文本的字体颜色</p>
+  
+  <ul><li>opacity 设置对象(元素)的不透明度，值为[0~1];</li>
+  <li><code>白色</code>三种表示方式： white 、 #fff 、 rgb(255,255,255)</li>
+  <li><code>黑色</code>三种表示方式： black 、 #000、rgb(0,0,0)</li>
+  </ul>
+</blockquote>
+
+<table><tbody><tr style="font-weight:bold">  <td>属性值</td>  <td>描述</td></tr><tr>  <td>英文单词</td>  <td>white白色 , blank黑色 …..</td></tr><tr>  <td>16进制</td>  <td>FFFFFF 白色，#000000 黑色</td></tr><tr>  <td>rgb</td>  <td>rgb(255,255,255) 白色，rgb(0,0,0)</td></tr><tr>  <td>rgba</td>  <td>rgb代表组成颜色，a 代表 alpha 透明度</td></tr></tbody></table>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line"><span class="hljs-comment">// 对于尚不支持opacity属性的IE浏览器可以使用IE私有的滤镜属性来实现与opacity相同的效果, 示例代码：</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">div</span>{<span class="hljs-attribute">opacity</span>:.<span class="hljs-number">5</span>;} <span class="hljs-comment">/* for IE9 and other browsers */</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">div</span>{<span class="hljs-attribute">filter</span>:alpha(opacity=<span class="hljs-number">50</span>);} <span class="hljs-comment">/* for IE8 and earlier */</span>
+</div></code></pre>
+
+
+
+<h2 id="2css-font-字体">2、CSS Font 字体</h2>
+
+<blockquote>
+  <p>CSS 字体属性定义文本的字体系列、大小、加粗、风格（如斜体）和变形（如小型大写字母）</p>
+</blockquote>
+
+<table><tbody><tr style="font-weight:bold">  <td>属性</td>  <td>值</td></tr><tr>  <td>font</td>  <td>简写属性。在一个声明中设置所有的字体属性</td></tr><tr>  <td>font-family</td>  <td>设置文本的字体系列</td></tr><tr>  <td>font-size</td>  <td>设置文本的字体大小</td></tr><tr>  <td>font-style</td>  <td>设置文本的字体样式</td></tr><tr>  <td>font-weight</td>  <td>设置字体的粗细。</td></tr></tbody></table>
+
+<blockquote>
+  <p>font 复合样式顺序：font-style  font-weight  font-size /line-height  font-family</p>
+</blockquote>
+
+<h2 id="3css样式之text文本设置">3、CSS样式之Text文本设置</h2>
+
+<blockquote>
+  <p>CSS文本属性可定义文本的外观，通过文本属性，可以改变文本的颜色、字符间距、对齐文本、装饰文本、对文本进行缩进等。</p>
+</blockquote>
+
+<table><tbody><tr style="font-weight:bold">  <td>属性</td>  <td>值</td></tr><tr>  <td>color</td>  <td>设置文本颜色</td></tr><tr>  <td>direction</td>  <td>设置文本方向</td></tr><tr>  <td>letter-spacing</td>  <td>设置字符间距</td></tr><tr>  <td>text-align</td>  <td>元素对齐方式</td></tr><tr>  <td>text-decoration</td>  <td>向文本添加修饰</td></tr><tr>  <td>text-indent</td>  <td>首行缩进</td></tr><tr>  <td>text-shadow</td>  <td>设置文本阴影</td></tr><tr>  <td>vertical-align</td>  <td>设置元素的垂直对齐方式</td></tr><tr>  <td>white-space</td>  <td>设置元素中空白的处理方式</td></tr><tr>  <td>word-spacing</td>  <td>设置字间距</td></tr></tbody></table>
+
+<ul><li>文本颜色： color</li>
+<li>字符间距 : letter-spacing</li>
+<li>设置行高： line-height</li>
+<li>文本对齐方式： text-align</li>
+<li>文本修饰： text-decoration</li>
+<li>文本缩进： text-indent ( em缩进字符）</li>
+<li>文本阴影： text-shadow</li>
+<li>文本转换 ： text-transform</li>
+<li>设置元素的垂直对齐：vertical-align</li>
+<li>设置元素中空白的处理方式： white-space</li>
+<li>设置字间距 ：word-spacing</li>
+</ul>
+
+<h2 id="4reset重置样式表">4、reset重置样式表</h2>
+
+<blockquote>
+  <p>reset.css / reset.min.css <br>
+  <strong>1. 默认样式自带样式属性的标签</strong></p>
+  
+  <ul><li>a 标签有默认自带的下划线</li>
+  <li>ul li / ol li 前面有默认的小黑点 / 数字</li>
+  <li>h1-h6 默认自带加粗</li>
+  <li>strong/ b 自带加粗效果</li>
+  <li>i / em 默认自带斜体</li>
+  <li>浏览器有默认自带的间距(<code>谷歌浏览器</code>body默认的间距是 8px)</li>
+  </ul>
+  
+  <p><strong>2、去掉默认样式自带样式属性</strong></p>
+  
+  <ul><li>text-decoration: none; 去掉a默认的下划线</li>
+  <li>text-decoration: underline; 添加下划线</li>
+  <li>list-style: none; 去掉列表(ul ol /li)默认的样式</li>
+  <li>font-weight:normal; 把粗体变成细体</li>
+  <li>font-style: normal; 把斜体变成正常字体</li>
+  <li>font-weight: bold; 把默认字体加粗</li>
+  </ul>
+</blockquote>
+
+<h2 id="5css的继承性">5、css的继承性</h2>
+
+<blockquote>
+  <p>继承性： CSS样式具有继承性，所谓的继承性，就是给某些元素设置样式时，后代元素也会自动继承父类的样式</p>
+  
+  <ul><li>关于文字样式的属性，都具有继承性。这些属性包括：color、 text-开头的、line-开头的、font-开头的；</li>
+  <li>关于盒子、定位、布局的属性，都不能继承； <br>
+  CSS中可以和不可以继承的属性 <a href="https://www.cnblogs.com/thislbq/p/5882105.html" target="_blank">https://www.cnblogs.com/thislbq/p/5882105.html</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="css常用单位总结emrempx">css常用单位总结：em，rem，px</h2>
+
+<table><tbody><tr style="font-weight:bold">  <td>长度单位</td>  <td>描述</td></tr><tr>  <td>em</td>  <td>相对于当前对象内文本的字体尺寸</td></tr><tr>  <td>px</td>  <td>像素；1px=1/96in</td></tr><tr>  <td>rem</td>  <td>css3新单位，对于根元素font-size计算值的倍数</td></tr></tbody></table>
+
+<h2 id="伪类选择器">伪类选择器</h2>
+
+<blockquote>
+  <p>一个元素为某种状态时，例如 鼠标划过、鼠标点击时的状态</p>
+  
+  <ul><li>E:link 设置超链接a的默认样式，未被访问前的样式</li>
+  <li>E:hover 设置元素在鼠标悬停时的样式 常用</li>
+  <li>E:visited 设置超链接被访问过时的样式</li>
+  <li>E:active 设置元素被激活（在鼠标点击与释放之间发生的事件）时的样式</li>
+  <li>E:focus 设置元素获取焦点时的样式（一般用于表单元素）</li>
+  <li>E:checked 设置选中状态的E元素。（用于input type为radio与checkbox）</li>
+  <li>E:enabled 可用状态的E元素。（一般用于表单元素）</li>
+  <li>E:disabled 选择每一个处于禁用状态的E元素 （一般用于表单元素）</li>
+  <li>E:first-child 匹配父元素的第一个子元素E</li>
+  <li>E:last-child 匹配父元素的最后一个子元素E</li>
+  <li>E:nth(n)匹配父元素的第n个子元素E</li>
+  <li>E:nth-last-child(n)匹配父元素的倒数第n个子元素E</li>
+  </ul>
+</blockquote></div></body></html>

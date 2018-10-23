@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .wrapper{
+            position: relative;
+            height: 600px;
+            background: url(img/pic.png) no-repeat left top;
+            background-size: cover;
+        }
+        .hou{
+            position: absolute;
+            left: 50%;
+            top: 352px;
+            margin-left: -400px;
+            width: 200px;
+            height: 180px;
+            background: url(img/hou.png) no-repeat 0 0;
+            animation: myFirst 1s steps(8) infinite;
+        }
+        .pig{
+            position: absolute;
+            left: 50%;
+            top: 352px;
+            margin-left: -200px;
+            width: 200px;
+            height: 180px;
+            background: url(img/pig.png) no-repeat 0 0;
+            animation: myFirst 1s steps(8) infinite;
+        }
+        .human{
+            position: absolute;
+            left: 50%;
+            top: 312px;
+            width: 170px;
+            height: 240px;
+            background: url(img/human.png) no-repeat 0 0;
+            animation: human 1s steps(8) infinite;
+        }
+        .shaseng{
+            position: absolute;
+            left: 50%;
+            top: 352px;
+            margin-left: 200px;
+            width: 210px;
+            height: 200px;
+            background: url(img/shaseng.png) no-repeat 0 0;
+            animation: shaseng 1s steps(8) infinite;
+        }
+        @keyframes myFirst{
+            0% {background-position: 0 0;}
+            100% {background-position: -1600px 0;}
+        }
+        @keyframes human{
+            0% {background-position: 0 0;}
+            100% {background-position: -1360px 0;}
+        }
+        @keyframes shaseng{
+            0% {background-position: 0 0;}
+            100% {background-position: -1680px 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="hou"></div>
+        <div class="pig"></div>
+        <div class="human"></div>
+        <div class="shaseng"></div>
+    </div>
+</body>
+</html>

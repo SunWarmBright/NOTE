@@ -1,0 +1,169 @@
+<!DOCTYPE html><html><head><title>珠峰培训CSS从入门到精通第七天</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h2 id="珠峰培训css从入门到精通第七天">珠峰培训CSS从入门到精通第七天</h2>
+
+
+
+<h3 id="1css-background背景">1、CSS Background（背景）</h3>
+
+
+
+<h4 id="1background-color-背景颜色">1）<code>background-color</code> 背景颜色</h4>
+
+<blockquote>
+  <p>background-color : 设置或检索对象的背景颜色，默认值：transparent； <br>
+  同时定义了背景颜色和背景图像时，背景图像覆盖在背景颜色之上</p>
+</blockquote>
+
+<ul><li>属性值有三种书写方式 <br>
+<ul>
+<li>第一种：关键字法（不常用）</li>
+<li>第二种：十六进制法 <strong>常用</strong></li>
+<li>第三种：rgb(0~255,0~255,0~255)</li></ul></li>
+</ul>
+
+
+
+<h4 id="2background-image背景图片">2）<code>background-image</code>背景图片</h4>
+
+<ul><li>语法<code>background-image:url("图片路径")</code></li>
+<li>特点：铺满整个内容区，并且x轴和y轴重复平铺</li>
+</ul>
+
+<blockquote>
+  <ul><li>background-image: 设置或检索对象的背景图像，默认值：<code>none</code>；</li>
+  <li>如果设置了 <code>background-image</code>，同时也建议设置 <code>background-color</code> 用于当背景图像不可见时保持与文本颜色有一定的对比度。</li>
+  <li>如果定义了多组背景图，且背景图之间有重叠，写在前面的将会盖在写在后面的图像之上。</li>
+  </ul>
+</blockquote>
+
+
+
+<h4 id="3background-repeat背景重复">3）<code>background-repeat</code>背景重复</h4>
+
+<blockquote>
+  <ul><li>功能：设置或检索对象的背景图像如何铺排填充。必须先指定 <code>background-image</code> 属性。默认值：<code>repeat</code>；</li>
+  <li>允许提供2个参数，如果提供全部2个参数，第1个用于横向，第二个用于纵向；</li>
+  </ul>
+</blockquote>
+
+<p><strong>常用属性值及意义</strong></p>
+
+<table><tbody><tr style="font-weight:bold">  <td>属性值</td>  <td>描述</td></tr><tr>  <td>repeat</td>  <td>默认。背景在水平和垂直方向平铺</td></tr><tr>  <td>repeat-x</td>  <td>背景在水平方向进行平铺</td></tr><tr>  <td>repeat-y</td>  <td>背景在垂直方向进行平铺</td></tr><tr>  <td>no-repeat</td>  <td>不平铺，只显示一张图片背景</td></tr></tbody></table>
+
+
+
+<h4 id="4background-position背景定位">4）<code>background-position</code>背景定位</h4>
+
+<blockquote>
+  <p>必须先指定 &lt;’ background-image ‘&gt; 属性。 该属性提供2个参数值</p>
+</blockquote>
+
+<ul><li>语法：<code>background-position:x y;</code></li>
+<li>数值表示方式： <br>
+<ul>
+<li><ol>
+<li rel="1">可以为具体数值</li></ol></li>
+<li><ol>
+<li rel="2">可以为关键字<code>top、left、right、bottom</code></li></ol></li>
+<li>3.可以设置为百分比</li></ul></li>
+<li>当我们只设置一个值的时候，该值将用于横坐标；纵坐标默认为50%（即<code>center</code>）</li>
+</ul>
+
+
+
+<h4 id="5background-attachment-背景关联">5）<code>background-attachment</code> 背景关联</h4>
+
+<ul><li>设置或检索背景图像是随对象内容滚动还是固定的。必须先指定<code>background-image</code>属性。默认值为：scroll</li>
+</ul>
+
+<table><tbody><tr style="font-weight:bold">  <td>属性值</td>  <td>描述</td></tr><tr>  <td>scroll</td>  <td>默认，背景图像随着我们页面的其余部分滚动</td></tr><tr>  <td>fixed</td>  <td>背景图像固定</td></tr></tbody></table>
+
+
+
+<h4 id="6background背景复合属性">6）<code>background</code>背景复合属性</h4>
+
+<ul><li>语法：<code>background: color image position repeat attachment</code></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs gams"><div class="hljs-line"><span class="hljs-comment">**背景复合属性**</span>
+</div><div class="hljs-line"> background: #f00 url(<span class="hljs-string">"img/bd_logo.jpg"</span>) center center <span class="hljs-keyword">no</span>-<span class="hljs-keyword">repeat</span> scroll;
+</div><div class="hljs-line"> <span class="hljs-comment">/*背景颜色 背景图像 位置 图像是否重复 背景关联*/</span>
+</div></code></pre>
+
+
+
+<h4 id="background-size-背景图片的大小"><code>background-size</code> 背景图片的大小</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs haml"><div class="hljs-line">-<span class="ruby"> 属性值可以为：</span>
+</div><div class="hljs-line"><span class="ruby"></span>    -<span class="ruby"> 具体的数值</span>
+</div><div class="hljs-line"><span class="ruby"></span>        -<span class="ruby"> 当只设置一个值的时候，表示的是宽度，高度自适应（保持宽高比例进行缩放）</span>
+</div><div class="hljs-line"><span class="ruby"></span>    -<span class="ruby"> 百分比（相对我们的容器）</span>
+</div><div class="hljs-line"><span class="ruby"></span>    -<span class="ruby"> auto 默认值，背景图像的真实大小</span>
+</div><div class="hljs-line"><span class="ruby"></span>    -<span class="ruby"> cover 将背景图像等比缩放到完全覆盖容器，背景图像可能超出容器。</span>
+</div><div class="hljs-line"><span class="ruby"></span>    -<span class="ruby"> contain 将背景图像进行等比缩放，背景图像始终被包含在我们的容器里</span>
+</div></code></pre>
+
+<h3 id="2ps工具的使用">2、PS工具的使用</h3>
+
+<blockquote>
+  <p>1.打开设计稿</p>
+  
+  <p>把设计稿直接拖到PS工具中，然后松开即可 <br>
+  文件 =&gt; 打开 ctrl + O <br>
+  2.关闭设计稿</p>
+  
+  <p>直接点击设计稿面板对应的关闭按钮 X <br>
+  文件 =&gt; 关闭 ctrl + W <br>
+  3.缩放设计稿</p>
+  
+  <p>ctrl +/- <br>
+  alt + 鼠标滚轮 <br>
+  ctrl + 1 回到设计稿100%的状态 <br>
+  ctrl + 0 回到设计稿打开的初始尺寸 <br>
+  4.给设计稿解锁和上锁</p>
+  
+  <p>解锁: 双击设计稿被锁住对应的图片 <br>
+  上锁：图层面板有一个小锁的小图标 <br>
+  5.拖动设计稿</p>
+  
+  <p>按住空格键 (鼠标就会出现一个小手的形状 ) ,鼠标拖动设计稿 <br>
+  6.回到设计稿原始的状态</p>
+  
+  <p>窗口 =&gt; 历史记录 （记录了每一步对设计稿的操作） <br>
+  7.取消虚线框</p>
+  
+  <p>ctrl + D <br>
+  8.快速切出我们想要的素材图片</p>
+  
+  <p>在对应的图层上 =&gt; 鼠标右键 =&gt; 智能对象（图层右下角多了一个小缺角 - 智能对象缩览图）=&gt; 双击这个智能对象缩览图 <br>
+  9.保存我们切下来的图片</p>
+  
+  <p>文件 =&gt; 存储为web所用的格式 <br>
+  ctrl + alt + shift + S</p>
+  
+  <ol><li rel="10">如何扣图</li>
+  </ol>
+  
+  <p>魔棒工具 <br>
+  橡皮擦 =&gt; 魔术橡皮檫工具 <br>
+  11.用虚线框看图层的大小</p>
+  
+  <p>按住ctrl 的同时点击图层的透明区域，图层会出现虚线框 <br>
+  用信息面板就可以查看虚线框的大小 <br>
+  ctrl + D 取消虚线框</p>
+  
+  <ol><li rel="12">标尺快捷键</li>
+  </ol>
+  
+  <p>ctrl + R</p>
+</blockquote></div></body></html>
